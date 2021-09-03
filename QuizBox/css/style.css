@@ -1,0 +1,282 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans-Regular.woff2') format('woff2'),
+    url('../fonts/OpenSans-Regular.woff') format('woff');
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  /*способ оптимизации загрузки шрифта*/
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans-Bold.woff2') format('woff2'),
+    url('../fonts/OpenSans-Bold.woff') format('woff');
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  /*наследует цвет родителя*/
+  text-decoration: none;
+  /*убираем подчеркивание ссылки*/
+
+}
+
+button {
+  border: none;
+  color: inherit;
+  /*background-color: transparent;*/
+  cursor: pointer;
+}
+
+body {
+  color: #fff;
+  font-family: OpenSans;
+}
+
+.container {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.header {
+  background: #17191C;
+
+  background-image: url(../images/header-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* mix-blend-mode: luminosity;
+  box-shadow: inset 0px -46px 50px #17191C;*/
+}
+
+.header__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 34px 0 30px;
+}
+
+.menu__list {
+  display: flex;
+}
+
+.menu__item {
+  margin-right: 30px;
+}
+
+.menu__link {
+  /*text-transform: uppercase;
+  верхний регистро*/
+
+  font-size: 16px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  transition: color .5s;
+  /*замедление 5 сек*/
+}
+
+.menu__link:hover {
+  color: #CB0E0E;
+}
+
+.phone {
+  font-size: 26px;
+  line-height: 35px;
+  margin-left: auto;
+}
+
+.scedule {
+  font-size: 13px;
+  line-height: 20px;
+  text-align: right;
+  text-decoration: underline;
+
+}
+
+.title {
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 64px;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 21px;
+}
+
+.header__text {
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 76px;
+}
+
+.button {
+
+
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
+  /* identical to box height */
+  align-items: center;
+  text-transform: uppercase;
+
+  margin-bottom: 26px;
+}
+
+.header__btn {
+  width: 168px;
+  height: 55px;
+  background: #8F00FF;
+  color: #fff;
+}
+
+.main {
+  background: #17191c;
+
+}
+
+.news {}
+
+.main__title {
+
+  display: flex;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 49px;
+  margin-bottom: 51px;
+  padding-top: 20px;
+}
+
+.main__title::after {
+
+  content: "";
+  width: 42px;
+  height: 42px;
+  margin-left: 10px;
+  background-image: url(../images/new.png);
+}
+
+.news__list {
+  display: flex;
+}
+
+.news__item {
+  background: #fff;
+  color: #303030;
+  margin: 27px;
+}
+
+.news__img {
+  margin-bottom: 24px;
+}
+
+.news__description-title {
+  font-size: 24px;
+  line-height: 33px;
+  margin-bottom: 23px;
+}
+
+.news__text {}
+
+.news__info {
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.news__time {
+  position: relative;
+}
+
+.news__time::before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background-image: url(../images/watch.png);
+}
+
+.news__questions {
+  position: relative;
+}
+
+.news__questions::before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background-image: url(../images/qa.png);
+
+}
+
+.news__button {
+  width: 135px;
+  height: 55px;
+  background: #fff;
+  margin-left: 24px;
+  border: 1px solid #8F00FF;
+  color: #8F00FF;
+}
+
+
+
+
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  width: 32px;
+  height: 32px;
+  color: black;
+  float: center;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border-radius: 50px;
+}
+
+.pagination a.active {
+  background-color: #8F00FF;
+  color: white;
+  border-radius: 50px;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
